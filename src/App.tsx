@@ -1,3 +1,4 @@
+import { HashRouter as Router } from "react-router-dom";
 import "./App.css";
 import Header from "./Components/Header";
 import Navbar from "./Components/Navbar";
@@ -11,17 +12,31 @@ import Footer from "./Components/Footer";
 
 function App() {
   return (
-    <>
+    <Router>
       <Header />
       <Navbar />
-      <Education />
-      <Skill />
-      <Project />
-      <Hobbies />
-      <Ambitions />
-      <Efforts />
+
+      <section id="education">
+        <Education />
+      </section>
+      <section id="skills">
+        <Skill />
+      </section>
+      <section id="projects">
+        <Project />
+      </section>
+      <section id="hobbies">
+        <Hobbies />
+      </section>
+      <section id="ambitions">
+        <Ambitions />
+      </section>
+      <section id="efforts">
+        <Efforts />
+      </section>
       <Footer />
-    </>
+    </Router>
   );
 }
+
 export default App;
